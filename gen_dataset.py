@@ -28,7 +28,7 @@ def generate_dataset(input_folder, output_folder):
             if cnt % 60 == 0:
                 showframe = deepcopy(frame)
                 # text coords were 40, 40
-                showframe = cv2.putText(showframe, "1: Move,2: Idle,3: Discard", (40, 40),
+                showframe = cv2.putText(showframe, "1: visible paw,2: no paw,3: Discard", (40, 40),
                                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), lineType=cv2.LINE_AA)
                 cv2.imshow('frame', showframe)
                 img_path = os.path.basename(video_file).replace(".avi", "") + "%d.jpg" % video_stream.get(
